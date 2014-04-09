@@ -1,0 +1,23 @@
+.scope body {
+    font-family: "Times New Roman", Georgia, Serif;
+}
+
+.scope h1, .scope h2, .scope h3, .scope h4, .scope h5, .scope h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+.scope .page-header {
+  padding-bottom: 9px;
+  margin: 20px 0 30px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.scope ul.unstyled, .scope ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
