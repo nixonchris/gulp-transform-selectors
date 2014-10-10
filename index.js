@@ -24,8 +24,12 @@ module.exports = function (fn, options) {
 	return es.map(function (file, callback) {
 		var through,
 			wait;
+		if(file.isNull()) {
 
-		if (file.isStream()) {
+			callback(null, file);
+			return
+
+		} else if (file.isStream()) {
 
 			through = es.through();
 			wait = es.wait(function (err, contents) {
