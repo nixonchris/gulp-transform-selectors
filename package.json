@@ -10,7 +10,7 @@
     "email": "",
     "url": "https://github.com/nixonchris"
   },
-  "repository": "nixonchris/gulp-require-convert",
+  "repository": "nixonchris/gulp-transform-selectors",
   "scripts": {
     "test": "istanbul test _mocha --report html -- test/*.js --reporter spec",
     "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
