@@ -22,10 +22,11 @@
     "vinyl-sourcemaps-apply": "^0.1.4"
   },
   "devDependencies": {
-    "mocha": "*",
     "coveralls": "*",
-    "mocha-lcov-reporter": "*",
+    "gulp-sourcemaps": "^1.2.2",
     "istanbul": "*",
+    "mocha": "*",
+    "mocha-lcov-reporter": "*",
     "should": "~2.1.0"
   },
   "engines": {
