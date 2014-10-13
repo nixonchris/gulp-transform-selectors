@@ -28,7 +28,7 @@ module.exports = function (fn, options) {
 			wait,
 			result;
 
-		if(file.isNull()) {
+		if (file.isNull()) {
 
 			callback(null, file);
 			return
@@ -47,8 +47,8 @@ module.exports = function (fn, options) {
 		} else if (file.isBuffer()) {
 
 			if (file.sourceMap) {
-	      options.makeSourceMaps = true;
-	    }
+				options.makeSourceMaps = true;
+			}
 
 			try {
 				result = transformSelector.process(file.contents.toString(), {
