@@ -1,3 +1,4 @@
+
 {
   "name": "gulp-transform-selectors",
   "version": "0.0.2",
@@ -10,7 +11,7 @@
     "email": "",
     "url": "https://github.com/nixonchris"
   },
-  "repository": "nixonchris/gulp-require-convert",
+  "repository": "nixonchris/gulp-transform-selectors",
   "scripts": {
     "test": "istanbul test _mocha --report html -- test/*.js --reporter spec",
     "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
@@ -18,13 +19,15 @@
   "dependencies": {
     "event-stream": "~3.1.0",
     "gulp-util": "~2.2.0",
-    "postcss": "^0.3.4"
+    "postcss": "^2.2.5",
+    "vinyl-sourcemaps-apply": "^0.1.4"
   },
   "devDependencies": {
-    "mocha": "*",
     "coveralls": "*",
-    "mocha-lcov-reporter": "*",
+    "gulp-sourcemaps": "^1.2.2",
     "istanbul": "*",
+    "mocha": "*",
+    "mocha-lcov-reporter": "*",
     "should": "~2.1.0"
   },
   "engines": {
