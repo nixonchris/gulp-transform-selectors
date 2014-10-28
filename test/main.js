@@ -101,10 +101,7 @@ describe('gulp-require-convert', function () {
 			contents: fs.readFileSync('test/fixtures/main.css')
 		});
 
-		init
-			.pipe(transformSelectors(testTransformation, {
-				splitOnCommas: true
-			}))
+		init.pipe(transformSelectors(testTransformation, { splitOnCommas: true }))
 			.pipe(write);
 
 		write.on('data', function (newFile) {
