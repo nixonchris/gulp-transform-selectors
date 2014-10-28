@@ -18,7 +18,8 @@
   "dependencies": {
     "event-stream": "~3.1.0",
     "gulp-util": "~2.2.0",
-    "postcss": "^0.3.4"
+    "postcss": "^2.2.5",
+    "vinyl-sourcemaps-apply": "^0.1.4"
   },
   "devDependencies": {
     "mocha": "*",
