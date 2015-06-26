@@ -3,7 +3,8 @@
 
 var fs = require('fs'),
 	es = require('event-stream'),
-	should = require('should');
+	should = require('should'),
+	sourcemaps = require('gulp-sourcemaps');
 
 require('mocha');
 
@@ -87,4 +88,30 @@ describe('gulp-require-convert', function () {
 		stream.write(srcFile);
 		stream.end();
 	});
+
+	it('should generate source maps', function (done) {
+
+		var init = sourcemaps.init();
+		var write = sourcemaps.write();
+
+		var srcFile = new gutil.File({
+			path: 'test/fixtures/main.css',
+			cwd: 'test/',
+			base: 'test/fixtures',
+			contents: fs.readFileSync('test/fixtures/main.css')
+		});
+
+		init.pipe(transformSelectors(testTransformation, { splitOnCommas: true }))
+			.pipe(write);
+
+		write.on('data', function (newFile) {
+			var contents = newFile.contents.toString();
+			should(/sourceMappingURL=data:application\/json;base64/.test(contents)).ok;
+			done();
+		});
+
+		init.write(srcFile);
+		init.end();
+	});
 });
+
